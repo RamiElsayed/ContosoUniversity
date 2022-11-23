@@ -103,8 +103,7 @@ namespace ContosoUniversity.Data
                 departments.Single(s => s.Name == "Mathematics").DepartmentID),
                 new Course (2021, "Composition", 3, 
                 departments.Single(s => s.Name == "English").DepartmentID),
-                new Course (2042, "Literature", 4, 
-                departments.Single(s => s.Name == "English").DepartmentID),
+                new Course (2042, "Literature", 4, departments.Single(s => s.Name == "English").DepartmentID),
             };
 
             foreach (Course c in courses)
