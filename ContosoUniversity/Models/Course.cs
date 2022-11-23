@@ -6,6 +6,14 @@ namespace ContosoUniversity.Models
 {
     public class Course
     {
+        public Course(int courseID, string title, int credits, int departmentID)
+        {
+            CourseID = courseID;
+            Title = title;
+            Credits = credits;
+            DepartmentID = departmentID;
+        }
+
         [DatabaseGenerated(DatabaseGeneratedOption.None)]
         [Display(Name = "Number")]
         public int CourseID { get; set; }
@@ -18,8 +26,8 @@ namespace ContosoUniversity.Models
 
         public int DepartmentID { get; set; }
 
-        public Department Department { get; set; }
-        public ICollection<Enrollment> Enrollments { get; set; }
-        public ICollection<CourseAssignment> CourseAssignments { get; set; }
+        public Department? Department { get; set; }
+        public ICollection<Enrollment> Enrollments { get; set; } = new List<Enrollment>();
+        public ICollection<CourseAssignment> CourseAssignments { get; set; } = new List<CourseAssignment>();
     }
 }

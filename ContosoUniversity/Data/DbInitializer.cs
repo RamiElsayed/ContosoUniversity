@@ -88,27 +88,23 @@ namespace ContosoUniversity.Data
 
             var courses = new Course[]
             {
-                new Course {CourseID = 1050, Title = "Chemistry",      Credits = 3,
-                    DepartmentID = departments.Single( s => s.Name == "Engineering").DepartmentID
-                },
-                new Course {CourseID = 4022, Title = "Microeconomics", Credits = 3,
-                    DepartmentID = departments.Single( s => s.Name == "Economics").DepartmentID
-                },
-                new Course {CourseID = 4041, Title = "Macroeconomics", Credits = 3,
-                    DepartmentID = departments.Single( s => s.Name == "Economics").DepartmentID
-                },
-                new Course {CourseID = 1045, Title = "Calculus",       Credits = 4,
-                    DepartmentID = departments.Single( s => s.Name == "Mathematics").DepartmentID
-                },
-                new Course {CourseID = 3141, Title = "Trigonometry",   Credits = 4,
-                    DepartmentID = departments.Single( s => s.Name == "Mathematics").DepartmentID
-                },
-                new Course {CourseID = 2021, Title = "Composition",    Credits = 3,
-                    DepartmentID = departments.Single( s => s.Name == "English").DepartmentID
-                },
-                new Course {CourseID = 2042, Title = "Literature",     Credits = 4,
-                    DepartmentID = departments.Single( s => s.Name == "English").DepartmentID
-                },
+                new Course(1050, "Chemistry", 3, departments.Single( s => s.Name == "Engineering").DepartmentID
+                ),
+                new Course (4022, "Microeconomics", 3, 
+                departments.Single( s => s.Name == "Economics").DepartmentID
+                ),
+                new Course (4041, "Macroeconomics", 3,
+                departments.Single( s => s.Name == "Economics").DepartmentID
+                ),
+                new Course (1045, "Calculus", 4,
+                    departments.Single( s => s.Name == "Mathematics").DepartmentID
+                ),
+                new Course (3141, "Trigonometry", 4, 
+                departments.Single(s => s.Name == "Mathematics").DepartmentID),
+                new Course (2021, "Composition", 3, 
+                departments.Single(s => s.Name == "English").DepartmentID),
+                new Course (2042, "Literature", 4, 
+                departments.Single(s => s.Name == "English").DepartmentID),
             };
 
             foreach (Course c in courses)
